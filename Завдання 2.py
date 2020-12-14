@@ -1,10 +1,25 @@
+n = int(input('n = '))
+
 import math
 def matimatik(x, y):
-    return (math.pow(x, 2) + math.pow(y, 2))
+    a = []
+    for i in range(n):
+        a.append(x[i] * y[i])
+    Rez = 0
+    for i in range(n):
+        Rez += a[i]
+    return (Rez)
 
-a = float(input('a(for the first and second vektors) = '))
-b = float(input('b(for the first vektor) = '))
-c = float(input('c(for the second vektor) = '))
 
-Rezult = 2 * matimatik(a, b) - 3 * matimatik(a, c)
-print('REPLY : {0}' .format(Rezult))
+A = [int(input('A[{0}] = '.format(i)))for i in range(n)]
+print()
+
+B = [int(input('B[{0}] = '.format(i)))for i in range(n)]
+print()
+
+C = [int(input('C[{0}] = '.format(i)))for i in range(n)]
+print()
+
+Rez = 2 * matimatik(A,B) - 3 * matimatik(A,C)
+print('REZULT = ', Rez)
+
